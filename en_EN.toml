@@ -1,0 +1,178 @@
+[permissions]
+CREATE_INSTANT_INVITE = "Create Invite"
+KICK_MEMBERS = "Kick Members"
+BAN_MEMBERS = "Ban Members"
+ADMINISTRATOR = "Administrator"
+MANAGE_CHANNELS = "Manage Channels"
+MANAGE_GUILD = "Manage Server"
+ADD_REACTIONS = "Add Reactions"
+VIEW_AUDIT_LOG = "View Audit Log"
+PRIORITY_SPEAKER = "Priority Speaker"
+STREAM = "Video"
+VIEW_CHANNEL = "View Channels"
+SEND_MESSAGES = "Send Messages"
+SEND_TTS_MESSAGES = "Send Text-ot-speech Messages"
+MANAGE_MESSAGES = "Manage Messages"
+EMBED_LINKS = "Embed Links"
+ATTACH_FILES = "Attach Files"
+READ_MESSAGE_HISTORY = "Read Message History"
+MENTION_ROLES = "Mention everyone, here and All Roles"
+USE_EXTERNAL_EMOJIS = "Use External Emojis"
+VIEW_GUILD_INSIGHTS = "View Guild Insights"
+CONNECT = "Connect to Voice Channel"
+SPEAK = "Speak"
+MUTE_MEMBERS = "Mute Members"
+DEAFEN_MEMBERS = "Deafen Members"
+MOVE_MEMBERS = "Move Members"
+USE_VOICE_ACTIVITY = "Use Voice Activity"
+CHANGE_NICKNAME = "Change Nickname"
+MANAGE_NICKNAMES = "Manage Nicknames"
+MANAGE_ROLES = "Manage Roles"
+MANAGE_WEBHOOKS = "Manage Webhooks"
+MANAGE_EMOJIS_AND_STICKERS = "Manage Expressions"
+USE_APPLICATION_COMMANDS = "Use Application Commands"
+REQUEST_TO_SPEAK = "Request to Speak"
+MANAGE_EVENTS = "Manage Events"
+MANAGE_THREADS = "Manage Threads"
+CREATE_PUBLIC_THREADS = "Create Public Threads"
+CREATE_PRIVATE_THREADS = "Create Private Threads"
+USE_EXTERNAL_STICKERS = "Use External Stickers"
+SEND_MESSAGES_IN_THREADS = "Send Messages in Threads"
+START_EMBEDDED_ACTIVITIES = "Start Embedded Activities"
+MODERATE_MEMBERS = "Moderate Members"
+VIEW_CREATOR_MONETIZATION_ANALYTICS = "View Server Insights"
+USE_SOUNDBOARD = "Use Soundboard"
+SEND_VOICE_MESSAGES = "Send Voice Messages"
+
+[exceptions]
+missing_permissions = """
+You do not have sufficient permissions to execute the command
+You missing such permissions as:\n"""
+cooldown = "Hold your horses! {timedelta}, You will be able to use this command again"
+user_no_banner_self = "You don't have a banner"
+user_no_banner_someone = "This user doesn't have a banner"
+guild_no_icon = "This guild doesn't have an icon"
+guild_no_banner = "This guild doesn't have a banner"
+guild_no_splash = "This guild doesn't have a invite background"
+
+[common]
+timeit = "Runtime: {elapsed_time}ms"
+EN = "English"
+RU = "Russian"
+
+[buttons.support]
+label = "Support"
+
+[buttons.invite.labels]
+0 = "Without permissions"
+8 = "Full permissions"
+
+[buttons.user]
+avatar = "URL"
+banner = "URL"
+
+[buttons.user.info]
+label = "Avatar"
+
+[buttons.guild.info]
+banner = "Banner"
+splash = "Splash"
+
+[commands.invite]
+description = "Invite bot to your server"
+
+[commands.support]
+description = "Do you need help with bot? ⏤ Contact us"
+
+[commands.about]
+description = "Current information about the bot"
+embed_title = "About {username}"
+embed_description = "Shinshi is a modern and user-friendly Discord-bot designed to give you and your servers great features and stable performance."
+embed_footer = "Latency: {latency}ms"
+
+  [commands.about.embed_field]
+  name = "Main information"
+  value = [
+    "Serving {guilds} guilds and {users} users",
+    "Use {memory_percent}% ({memory_natural}) of RAM",
+    "{connections} voice connections",
+    "Was launched {create_time}"
+  ]
+
+[commands.user.info]
+description = "Get information about a user or yourself"
+arguments_target_description = "Specify the member or user ID"
+button_name = "Avatar"
+
+[commands.user.info.fields.created_at]
+name = "Created"
+value = """
+<t:{created_at}:R>
+(<t:{created_at}:D>)"""
+
+[commands.user.info.fields.joined_at]
+name = "Joined at {guild}"
+value = """
+<t:{joined_at}:R>
+(<t:{joined_at}:D>)"""
+
+[commands.user.info.fields.roles]
+name = "Roles"
+value_if_none = "No roles"
+value_if_many = "{roles}... and the other {len} roles"
+
+[commands.user.avatar]
+description = "Get your or user's avatar"
+arguments_target_description = "Specify the member or user ID"
+embed_title = "Avatar {username}"
+
+[commands.user.banner]
+description = "Get your or user's banner"
+arguments_target_description = "Specify the member or user ID"
+embed_title = "Banner {username}"
+
+[commands.guild.info]
+description = "Get information about the current guild"
+no_guild_description = "No description"
+field_owner = "Owner"
+field_members = "Members"
+field_joined_at = "You joined at"
+field_created_at = "Created at"
+
+  [commands.guild.info.field_channels]
+  name = "Channels"
+  text = "Text"
+  voice = "Voice"
+  categories = "Categories"
+
+  [commands.guild.info.field_verification_level]
+  name = "Verification level"
+  levels = [
+    "No",
+    "Low",
+    "Medium",
+    "High",
+    "Highest"
+  ]
+
+[commands.guild.icon]
+description = "Get an icon for this guild"
+embed_title = "{guild_name}: Icon"
+
+[commands.guild.banner]
+description = "Get a banner for this guild"
+embed_title = "{guild_name}: Banner"
+
+[commands.guild.splash]
+description = "Get this guild's invitation background"
+embed_title = "{guild_name}: Invite background"
+
+[commands.settings.locale.user]
+description = "Change the your language"
+select_placeholder = "Select your preferred language"
+success_message = "Successfully set **{emoji} {language}**!"
+
+[commands.settings.locale.guild]
+description = "Change the language of guild"
+select_placeholder = "Select preferred language"
+success_message = "Successfully set **{emoji} {language}** for {guild}!"

@@ -1,0 +1,177 @@
+[permissions]
+CREATE_INSTANT_INVITE = "Создавать приглашение"
+KICK_MEMBERS = "Выгонять пользователей"
+BAN_MEMBERS = "Банить пользователей"
+ADMINISTRATOR = "Администратор"
+MANAGE_CHANNELS = "Управлять каналами"
+MANAGE_GUILD = "Управлять гильдией"
+ADD_REACTIONS = "Добавлять реакции"
+VIEW_AUDIT_LOG = "Смотреть журнал аудита"
+PRIORITY_SPEAKER = "Приоритетное вещание"
+STREAM = "Стримить"
+VIEW_CHANNEL = "Смотреть каналы"
+SEND_MESSAGES = "Отправлять сообщения"
+SEND_TTS_MESSAGES = "Отправлять TTS-сообщения"
+MANAGE_MESSAGES = "Управлять сообщениями"
+EMBED_LINKS = "Вложения"
+ATTACH_FILES = "Прикреплять файлы"
+READ_MESSAGE_HISTORY = "Читать историю сообщения"
+MENTION_ROLES = "Упоминать роли"
+USE_EXTERNAL_EMOJIS = "Использовать внешние эмодзи"
+VIEW_GUILD_INSIGHTS = "Смотреть статистику гильдии"
+CONNECT = "Присоединяться к голосовому каналу"
+SPEAK = "Разговаривать"
+MUTE_MEMBERS = "Выключить голос пользователю"
+DEAFEN_MEMBERS = "Выключить слух пользователю"
+MOVE_MEMBERS = "Перемещать пользователей"
+USE_VOICE_ACTIVITY = "Использовать голосовую активность"
+CHANGE_NICKNAME = "Изменять никнейм"
+MANAGE_NICKNAMES = "Управлять никнейма"
+MANAGE_ROLES = "Управлять ролями"
+MANAGE_WEBHOOKS = "Управлять веб-хуками"
+MANAGE_EMOJIS_AND_STICKERS = "Управлять эмодзи и стикерами"
+USE_APPLICATION_COMMANDS = "Использовать приложения"
+REQUEST_TO_SPEAK = "Выйти на сцену"
+MANAGE_EVENTS = "Управлять событиями"
+MANAGE_THREADS = "Управлять ветками"
+CREATE_PUBLIC_THREADS = "Создавать публичные ветки"
+CREATE_PRIVATE_THREADS = "Создавать приватные ветки"
+USE_EXTERNAL_STICKERS = "Использовать внешние стикеры"
+SEND_MESSAGES_IN_THREADS = "Отправлять сообщениях в ветках"
+START_EMBEDDED_ACTIVITIES = "Начинать активности"
+MODERATE_MEMBERS = "Модерировать участников"
+VIEW_CREATOR_MONETIZATION_ANALYTICS = "Смотреть аналитику"
+USE_SOUNDBOARD = "Использовать саунд-боард"
+SEND_VOICE_MESSAGES = "Отправлять голосовые сообщения"
+
+[exceptions]
+missing_permissions = """
+У вас недостаточно прав для выполнения команды
+Вам не хватает таких прав, как:\n"""
+cooldown = "Придержите коней! {timedelta}, Вы снова сможете использовать эту команду"
+user_no_banner_self = "У вас нет баннера"
+user_no_banner_someone = "У данного пользователя нет баннера"
+guild_no_icon = "У данной гильдии нет иконки"
+guild_no_banner = "У данной гильдии нет баннера"
+guild_no_splash = "У данной гильдии нет фона приглашения"
+
+[common]
+timeit = "Время выполнения: {elapsed_time}ms"
+EN = "Английский"
+RU = "Русский"
+
+[buttons.support]
+label = "Сервер поддержки"
+
+[buttons.invite.labels]
+0 = "Без прав"
+8 = "С правами администратора"
+
+[buttons.user]
+avatar = "Ссылка"
+banner = "Ссылка"
+
+[buttons.user.info]
+label = "Аватарка"
+
+[buttons.guild.info]
+banner = "Баннер"
+splash = "Фон приглашения"
+
+[commands.invite]
+description = "Пригласите бота на свой сервер"
+
+[commands.support]
+description = "Вам нужна помощь с ботом? ⏤ Обратитесь к нам"
+
+[commands.about]
+description = "Текущая информация про бота"
+embed_title = "{username}: Информация"
+embed_description = "Shinshi - это современный и удобный Discord-бот, разработанный для предоставления вам и вашим серверам отличных функций и стабильной работы."
+embed_footer = "Задержка: {latency}ms"
+
+  [commands.about.embed_field]
+  name = "Основная информация"
+  value = [
+    "Обслуживаем {guilds} гильдий и {users} пользователей",
+    "Используем {memory_percent}% ({memory_natural}) оперативной памяти",
+    "{connections} голосовых соединений",
+    "Были запущены {create_time}"
+  ]
+
+[commands.user.info]
+description = "Получить информацию о пользователе или о себе"
+arguments_target_description = "Укажите пользователя или его ID"
+
+[commands.user.info.fields.created_at]
+name = "Создан"
+value = """
+<t:{created_at}:R>
+(<t:{created_at}:D>)"""
+
+[commands.user.info.fields.joined_at]
+name = "Зашел на {guild}"
+value = """
+<t:{joined_at}:R>
+(<t:{joined_at}:D>)"""
+
+[commands.user.info.fields.roles]
+name = "Роли"
+value_if_none = "Нет"
+value_if_many = "{roles}... и {len} других ролей"
+
+[commands.user.avatar]
+description = "Получить свой аватар или пользователя"
+arguments_target_description = "Укажите пользователя или его ID"
+embed_title = "Аватар {username}"
+
+[commands.user.banner]
+description = "Получить свой баннер или пользователя"
+arguments_target_description = "Укажите пользователя или его ID"
+embed_title = "Баннер {username}"
+
+[commands.guild.info]
+description = "Получить информацию о текущей гильдии"
+no_guild_description = "Описание отсутствует"
+field_owner = "Владелец"
+field_members = "Участники"
+field_joined_at = "Вы зашли"
+field_created_at = "Создана"
+
+  [commands.guild.info.field_channels]
+  name = "Каналы"
+  text = "Текстовые"
+  voice = "Голосовые"
+  categories = "Категории"
+
+  [commands.guild.info.field_verification_level]
+  name = "Уровень проверки"
+  levels = [
+    "Нет",
+    "Низкий",
+    "Средний",
+    "Высокий",
+    "Самый высокий"
+  ]
+
+[commands.guild.icon]
+description = "Получить иконку данной гильдии"
+embed_title = "{guild_name}: Иконка"
+
+[commands.guild.banner]
+description = "Получить баннер данной гильдии"
+embed_title = "{guild_name}: Баннер"
+
+[commands.guild.splash]
+description = "Получить фон приглашения данной гильдии"
+embed_title = "{guild_name}: Фон приглашения"
+
+[commands.settings.locale.user]
+description = "Изменить свой язык"
+select_placeholder = "Выберите нужный вам язык"
+success_message = "Вы успешно поставили **{emoji} {language}** язык!"
+
+[commands.settings.locale.guild]
+description = "Изменить язык гильдии"
+select_placeholder = "Выберите нужный язык"
+success_message = "Вы успешно поставили **{emoji} {language}** язык для {guild}!"
